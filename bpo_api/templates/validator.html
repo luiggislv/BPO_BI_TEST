@@ -1,0 +1,32 @@
+
+<form action="/validate" method="POST">
+  Pass condition: 
+  <select name="condition">
+   <option value="join">Query 1 and Query 2 data is the same for all rows that join in both queries</option>
+   <option value="same">Query 1 and Query 2 data is exactly the same</option>
+</select>
+<br><br>
+  Column Key 1: <input type="text" name="key1" value= "state"><br>
+<br>
+  Connection 1
+  <select name="conn1">
+    <option value="connectionStringSQL">SQL Dev</option>
+    <option value="connectionStringUACdev">UAC Dev</option>
+    <option value="connectionStringUAC">UAC Stage</option>
+  </select>
+  <br><br>
+  Query 1<textarea name = "query1" rows="4" cols="80" >SELECT state,revenue,num_stores FROM DBASandbox.dbo.AE4244_Data1
+  </textarea>
+  <br><br>
+  Column Key 2: <input type="text" name="key2" value= "state"><br>
+<br>
+  Connection 2<select name="conn2">
+  <option value="connectionStringSQL">SQL Dev</option>
+  <option value="connectionStringUACdev">UAC Dev</option>
+  <option value="connectionStringUAC">UAC Stage</option>
+  </select>
+  <br><br>
+  Query 2<textarea name = "query2" rows="4" cols="80" >SELECT state,revenue,num_stores FROM DBASandbox.dbo.AE4244_Data2
+  </textarea>
+  <br><br><input type="submit" value="Validate">
+</form>
