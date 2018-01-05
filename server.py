@@ -11,6 +11,12 @@ def welcome_to_home():
     #return "Welcome to BPO BI page"
     return render_template('login.html')
 '''
+
+@app.route("/example", methods=['GET'])
+def welcome_to_home():
+    print("test")
+    return render_template('test_reactjs.html')
+
 @app.route('/')
 def login2():
     error = None
